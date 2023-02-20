@@ -125,21 +125,26 @@ resource webApplication 'Microsoft.Web/sites@2021-01-15' = {
 ```
 
 
-Step 3: Checking Microsoft hosted Parallel jobs (Free tier)
+Step 3: Deploying Bicep template to Azure
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-1. Login to https://dev.azure.com to open Azure DevOps. Select your Organization and click on Organization Settings. 
+1. Login to azure using Az cli
 
-<img width="208" alt="image" src="https://user-images.githubusercontent.com/84516667/201188357-27fcb1c7-3e4b-4daf-868b-333572957d90.png">
+```
+az login
+```
 
-2. Select Parallel jobs under pipelines and check if you see Microsoft-hosted Free tier parallel jobs as shown in the screenshot below,
+2. Create/use exising resource group to create thses resource
 
-<img width="698" alt="image" src="https://user-images.githubusercontent.com/84516667/201190398-8385360f-9c55-48d5-9d69-e7c2a922bceb.png">
+```
+$groupname='rg-bicepdemo'
+$location='westus'
+$deploymentname='Appdeployment'
+az group create -n $groupname -l $location
+```
 
-If you don't have a free tier, you can request this grant by submitting a [request](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbR63mUWPlq7NEsFZhkyH8jChUMlM3QzdDMFZOMkVBWU5BWFM3SDI2QlRBSC4u)
-
-Note: You can select either Public or Private project depending on your usage.
-
-<img width="924" alt="image" src="https://user-images.githubusercontent.com/84516667/201203577-98b94d93-4034-49c2-8796-c74af07a5092.png">
-
+3. Deploy bicep template  to azure
+```
+az  deployment group create  --name $deploymentname  -g $groupname --template-file .\main.bicep  --parameters environmentType=nonprod
+```
 [Home](https://github.com/swmannepalli/Azure-Data-Factory-CI-CD)
