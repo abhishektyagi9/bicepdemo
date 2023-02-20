@@ -76,12 +76,12 @@ param prefix string='webapppublicplam'
 ])
 param environmentType string
 param prefixwebapp string='webapp01'
+
 ```
 
 **Add following variables into your file**
 ```
-var storageaccountName='storage${uniqueString(resourceGroup().id)}'
-var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'
+
 var appServicePlanSkuName = (environmentType == 'prod') ? 'P2V3' : 'F1'
 var appserviceplan='${prefix}${uniqueString(resourceGroup().id)}'
 var webappname='${prefixwebapp}${uniqueString(resourceGroup().id)}'
