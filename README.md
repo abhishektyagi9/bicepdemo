@@ -62,7 +62,9 @@ resource webApplication 'Microsoft.Web/sites@2021-01-15' = {
 
 **Step 2: Demonstrate how to define parameters, variables, and resources.** 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
+A parameter lets you bring in values from outside the template file. For example, if someone is manually deploying the template by using the Azure CLI or Azure PowerShell, they'll be asked to provide values for each parameter. They can also create a parameter file, which lists all of the parameters and values they want to use for the deployment. If the template is deployed from an automated process like a deployment pipeline, the pipeline can provide the parameter values.
 
+A variable is defined and set within the template. Variables let you store important information in one place and refer to it throughout the template without having to copy and paste it.
 
 **Add following parameteres**
 ```
