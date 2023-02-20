@@ -25,7 +25,7 @@
 
 + Provide bicep file name that will be used for this workshop. Click on save.
 
-In bicep file start typing "res"
+In bicep file start typing "res" and select appservice plan or copy below code
 
 ```
 resource appServicePlan 'Microsoft.Web/serverfarms@2020-12-01' = {
@@ -38,7 +38,25 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2020-12-01' = {
 }
 ```
 
-**Step 2: Create ARM Service connection to Prod subscription** 
+Next, add start typing webapp or copy following code
+
+```
+resource webApplication 'Microsoft.Web/sites@2021-01-15' = {
+  name: 'name'
+  location: location
+  tags: {
+    'hidden-related:${resourceGroup().id}/providers/Microsoft.Web/serverfarms/appServicePlan': 'Resource'
+  }
+  properties: {
+    serverFarmId: 'webServerFarms.id'
+  }
+}
+```
+
+
+
+
+**Step 2: Demonstrate how to define parameters, variables, and resources.** 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 + Go to the project created above, and select Project settings.
