@@ -145,6 +145,6 @@ az group create -n $groupname -l $location
 
 3. Deploy bicep template  to azure
 ```
-az  deployment group create  --name $deploymentname  -g $groupname --template-file .\main.bicep  --parameters environmentType=nonprod
+az deployment group create  --name $deploymentname  -g $groupname --template-file .\main.bicep  --parameters environmentType=nonprod
 ```
 [Home](https://github.com/swmannepalli/Azure-Data-Factory-CI-CD)
