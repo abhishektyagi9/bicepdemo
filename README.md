@@ -20,14 +20,12 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 **Step 1: Create Azure DevOps Project**
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
-+ Login to https://dev.azure.com to open Azure DevOps. Make sure your organization is selected on top left side. Click on New project.
++ Open Vs Code editor and Click on to create new file and save it as a bicep file.
+<img width="322" alt="image" src="https://user-images.githubusercontent.com/24537906/220178524-b9fc31b1-ce71-4425-beb9-f1f9f2641690.png">
 
-![image](https://user-images.githubusercontent.com/24537906/220178524-b9fc31b1-ce71-4425-beb9-f1f9f2641690.png)
++ Provide bicep file name that will be used for this workshop. Click on save.
 
-
-+ Provide project name that will be used for this workshop and check other settings in screenshot below. Click on Create.
-
-<img width="322" alt="image" src="https://user-images.githubusercontent.com/84516667/198498472-db51107b-79bd-474f-bb94-976fffe66e2f.png">
+In bicep file start typing "res"
 
 
 **Step 2: Create ARM Service connection to Prod subscription** 
