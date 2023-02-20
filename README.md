@@ -13,16 +13,17 @@
 ## :dart: Objectives
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-1. Creating Azure DevOps project
-2. Create ARM Service connection to Prod subscription - A Service Connection is required for Azure DevOps Continuous Build and Continuous Release Pipelines to talk to external and remote services and execute tasks. If you want to understand what happens when you create an ARM serice connection, check [this](https://learn.microsoft.com/en-us/azure/devops/pipelines/release/azure-rm-endpoint?view=azure-devops#what-happens-when-you-create-an-arm-service-connection)
-3. Check if your ogranization has free tier Microsoft hosted parallel jobs assigned, if not submit a request. Refer [this](https://microsoft.seismic.com/share/PTVT8mQ8WgGGHWTWJVHhHq3DbVD) link to understand more on parallel jobs.
+1. Walk through the process of creating a Bicep file.
+2. Demonstrate how to define parameters, variables, and resources.
+3. Deploy resources using the Azure CLI or Azure Portal.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 **Step 1: Create Azure DevOps Project**
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 + Login to https://dev.azure.com to open Azure DevOps. Make sure your organization is selected on top left side. Click on New project.
 
-<img width="940" alt="image" src="https://user-images.githubusercontent.com/84516667/198498295-2eb40fe9-ec3c-43fb-a846-e2f47d65a29d.png">
+![image](https://user-images.githubusercontent.com/24537906/220178524-b9fc31b1-ce71-4425-beb9-f1f9f2641690.png)
+
 
 + Provide project name that will be used for this workshop and check other settings in screenshot below. Click on Create.
 
