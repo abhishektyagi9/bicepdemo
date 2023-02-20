@@ -27,7 +27,7 @@
 
 In bicep file start typing "res"
 
-'''
+```
 resource appServicePlan 'Microsoft.Web/serverfarms@2020-12-01' = {
   name: 'name'
   location: location
@@ -36,7 +36,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2020-12-01' = {
     capacity: 1
   }
 }
-
+```
 
 **Step 2: Create ARM Service connection to Prod subscription** 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
