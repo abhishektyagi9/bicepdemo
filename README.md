@@ -99,17 +99,20 @@ param environmentType string
 param prefixwebapp string='webapp01'
 
 var appServicePlanSkuName = (environmentType == 'prod') ? 'P2V3' : 'F1'
-var appserviceplanname='${prefix}${uniqueString(resourceGroup().id)}'
+var appserviceplan='${prefix}${uniqueString(resourceGroup().id)}'
 var webappname='${prefixwebapp}${uniqueString(resourceGroup().id)}'
 
+
+//provisioning azure app service plan
 resource appServicePlan 'Microsoft.Web/serverfarms@2020-12-01' = {
-  name: appserviceplanname
+  name: appserviceplan
   location: location
   sku: {
     name: appServicePlanSkuName
     capacity: 1
   }
 }
+//provisioning azure app service in above app plan
 resource webApplication 'Microsoft.Web/sites@2021-01-15' = {
   name: webappname
   location: location
@@ -120,6 +123,8 @@ resource webApplication 'Microsoft.Web/sites@2021-01-15' = {
     serverFarmId: appServicePlan.id
   }
 }
+
+
 
 
 ```
