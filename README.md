@@ -18,7 +18,7 @@
 3. Deploy resources using the Azure CLI or Azure Portal.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
-**Step 1: Create Azure DevOps Project**
+**Step 1: Walk through the process of creating a Bicep file**
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 + Open Vs Code editor and Click on to create new file and save it as a bicep file.
 <img width="322" alt="image" src="https://user-images.githubusercontent.com/24537906/220178524-b9fc31b1-ce71-4425-beb9-f1f9f2641690.png">
@@ -60,9 +60,8 @@ resource webApplication 'Microsoft.Web/sites@2021-01-15' = {
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
 **Add following parameteres**
-
+```
 param location string=resourceGroup().location
 param prefix string='webapppublicplam'
 @allowed([
@@ -71,16 +70,16 @@ param prefix string='webapppublicplam'
 ])
 param environmentType string
 param prefixwebapp string='webapp01'
-
+```
 
 **Add following variables into your file**
-
+```
 var storageaccountName='storage${uniqueString(resourceGroup().id)}'
 var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'
 var appServicePlanSkuName = (environmentType == 'prod') ? 'P2V3' : 'F1'
 var appserviceplan='${prefix}${uniqueString(resourceGroup().id)}'
 var webappname='${prefixwebapp}${uniqueString(resourceGroup().id)}'
-
+```
 
 <img width="149" alt="image" src="https://user-images.githubusercontent.com/84516667/198499277-9d01c1e0-e001-4642-b6bd-cf2989be15a5.png">
 
