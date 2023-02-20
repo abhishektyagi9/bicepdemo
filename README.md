@@ -3,8 +3,10 @@
 🤔 Prerequisites
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-+ Account and Organization created in Azure Devops. 
-+ If not, follow [this](https://learn.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=azure-devops) tutorial to sign up (Click on Start free). Organization name is automatically populated, click on create.
++ Windows 11/1- – The majority of the demos in this tutorial will work on other operating systems but all demos will use Windows 11.
++ Visual Studio Code( If not downloaded down load .[here](https://code.visualstudio.com/)
++ Download Bicep extension in visual studio code [steps](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)
++ Azure CLI download and [install](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
