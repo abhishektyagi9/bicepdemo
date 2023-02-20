@@ -87,20 +87,43 @@ var appserviceplan='${prefix}${uniqueString(resourceGroup().id)}'
 var webappname='${prefixwebapp}${uniqueString(resourceGroup().id)}'
 ```
 
-<img width="149" alt="image" src="https://user-images.githubusercontent.com/84516667/198499277-9d01c1e0-e001-4642-b6bd-cf2989be15a5.png">
+Assign variables and Parameters in your Bicep template
 
-+ Under Pipelines, select Service connections --> New service connection/ Create Service Connection
+```
+param location string=resourceGroup().location
+param prefix string='webapppublicplam'
+@allowed([
+  'nonprod'
+  'prod'
+])
+param environmentType string
+param prefixwebapp string='webapp01'
 
-<img width="908" alt="image" src="https://user-images.githubusercontent.com/84516667/198499398-eb353a36-274d-4cbe-86c4-8b3647e217a2.png">
+var appServicePlanSkuName = (environmentType == 'prod') ? 'P2V3' : 'F1'
+var appserviceplanname='${prefix}${uniqueString(resourceGroup().id)}'
+var webappname='${prefixwebapp}${uniqueString(resourceGroup().id)}'
 
-+ Select Azure Resource Manager, clcik on Next at the bottom. Select Service principal (automatic) and click on Next.
+resource appServicePlan 'Microsoft.Web/serverfarms@2020-12-01' = {
+  name: appserviceplanname
+  location: location
+  sku: {
+    name: appServicePlanSkuName
+    capacity: 1
+  }
+}
+resource webApplication 'Microsoft.Web/sites@2021-01-15' = {
+  name: webappname
+  location: location
+  tags: {
+    'hidden-related:${resourceGroup().id}/providers/Microsoft.Web/serverfarms/appServicePlan': 'Resource'
+  }
+  properties: {
+    serverFarmId: appServicePlan.id
+  }
+}
 
-<img width="290" alt="image" src="https://user-images.githubusercontent.com/84516667/198656134-4b64be39-299a-423a-b75b-7610125c6c54.png">
 
-+ Select Scope level as Subscription, select your Prod subscription. Leave Resource group value as empty as we don't want to limit this connection to one single resource group.
-+ Provide Service connection name (For Example, youralias_Prod) and click on Save.
-
-<img width="248" alt="image" src="https://user-images.githubusercontent.com/84516667/198500438-ee545df0-f98e-4bbe-9715-7bf2026cd9a3.png">
+```
 
 
 Step 3: Checking Microsoft hosted Parallel jobs (Free tier)
