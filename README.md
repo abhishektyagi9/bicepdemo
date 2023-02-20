@@ -87,8 +87,7 @@ var appserviceplan='${prefix}${uniqueString(resourceGroup().id)}'
 var webappname='${prefixwebapp}${uniqueString(resourceGroup().id)}'
 ```
 
-Assign variables and Parameters in your Bicep template
-
+******Assign variables and Parameters in your Bicep template, The final Bicep file should look something like this** 
 ```
 param location string=resourceGroup().location
 param prefix string='webapppublicplam'
