@@ -147,4 +147,9 @@ az group create -n $groupname -l $location
 ```
 az deployment group create  --name $deploymentname  -g $groupname --template-file .\main.bicep  --parameters environmentType=nonprod
 ```
+
+Check resource deployment in azure
+![image](https://user-images.githubusercontent.com/24537906/220200734-46959726-44a3-45bc-a36b-b09daee48484.png)
+
+
 [Home](https://github.com/swmannepalli/Azure-Data-Factory-CI-CD)
