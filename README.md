@@ -8,6 +8,7 @@
 + Download Bicep extension in visual studio code [steps](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)
 + Azure CLI download and [install](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli)
 
++ Addional helpful document on Bicep installation https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## :dart: Objectives
