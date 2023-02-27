@@ -102,14 +102,14 @@ param appServiceAppName string = 'toy-${uniqueString(resourceGroup().id)}'
 @description('The name of the App Service plan SKU.')
 param appServicePlanSkuName string = 'F1'
 
-var appServicePlanName = 'toy-product-launch-plan'
+var appServicePlanName = 'product-launch-plan'
 
 ```
 
-******Complete the module declaration:** 
+******Complete the module declaration and add following in your module file:** 
 ```
 module app 'modules/app.bicep' = {
-  name: 'toy-launch-app'
+  name: 'apriva-launch-app'
   params: {
     appServiceAppName: appServiceAppName
     appServicePlanName: appServicePlanName
@@ -240,4 +240,4 @@ Check resource deployment in azure, login to [Portal](https://portal.azure.com) 
 ![image](https://user-images.githubusercontent.com/24537906/220200734-46959726-44a3-45bc-a36b-b09daee48484.png)
 
 
-[Home](https://github.com/swmannepalli/Azure-Data-Factory-CI-CD)
+[Home]([https://github.com/swmannepalli/Azure-Data-Factory-CI-CD](https://github.com/abhishektyagi9/bicepdemo/edit/main/modules/module01/Module01.md))
