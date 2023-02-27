@@ -25,7 +25,7 @@
 **Add an App Service plan and app to your Bicep template
 **
 
-+ Open Vs Code editor and Click on to create new file and save it as a bicep file.
++ Open Vs Code editor and Click on to create new file and save it as a main.bicep .
 <img width="322" alt="image" src="https://user-images.githubusercontent.com/24537906/220178524-b9fc31b1-ce71-4425-beb9-f1f9f2641690.png">
 
 + Provide bicep file name that will be used for this workshop. Click on save.
