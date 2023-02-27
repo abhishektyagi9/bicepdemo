@@ -1,5 +1,26 @@
 [Home](https://github.com/swmannepalli/Azure-Data-Factory-CI-CD)
 
+ Create and use Bicep modules
+ 
+ Benefits of Modules:
+
+1. Reusability
+  After you've created a module, you can reuse it in multiple Bicep files, even if the files are for different projects or workloads. For example, when you build out     one solution, you might create separate modules for the app components, the database, and the network-related resources. Then, when you start to work on another        project with similar network requirements, you can reuse the relevant module.
+
+2.Encapsulation
+
+Modules help you keep related resource definitions together. For example, when you define an Azure Functions app, you typically deploy the app, a hosting plan for the app, and a storage account for the app's metadata. These three components are defined separately, but they represent a logical grouping of resources, so it might make sense to define them as a module.
+
+
+Composability
+After you've created a set of modules, you can compose them together. For example, you might create a module that deploys a virtual network, and another module that deploys a virtual machine. You define parameters and outputs for each module so that you can take the important information from one and send it to the other.
+
+Diagram that shows a template referencing two modules and passing the output from one to the parameter of another.
+
+![image](https://user-images.githubusercontent.com/24537906/221453424-3ddd0d43-6cfc-4b71-bcc6-cdaa190afe98.png)
+
+![image](https://user-images.githubusercontent.com/24537906/221453525-77e96213-5aa0-4882-8b46-feca52d0c996.png)
+
 🤔 Prerequisites
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
