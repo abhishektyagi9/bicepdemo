@@ -16,10 +16,8 @@ Composability
 After you've created a set of modules, you can compose them together. For example, you might create a module that deploys a virtual network, and another module that deploys a virtual machine. You define parameters and outputs for each module so that you can take the important information from one and send it to the other.
 
 Diagram that shows a template referencing two modules and passing the output from one to the parameter of another.
-
-![image](https://user-images.githubusercontent.com/24537906/221453424-3ddd0d43-6cfc-4b71-bcc6-cdaa190afe98.png)
-
-![image](https://user-images.githubusercontent.com/24537906/221453525-77e96213-5aa0-4882-8b46-feca52d0c996.png)
+<img width="322" alt="image" src="(https://user-images.githubusercontent.com/24537906/221453424-3ddd0d43-6cfc-4b71-bcc6-cdaa190afe98.png"/>
+<img width="322" alt="image" src="(https://user-images.githubusercontent.com/24537906/221453525-77e96213-5aa0-4882-8b46-feca52d0c996.png"/>
 
 🤔 Prerequisites
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
